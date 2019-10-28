@@ -7,79 +7,79 @@
         %p.side-header__box__user-name ぺぱ郎
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group
-            %a{:href => ""}
-              %i.fa.fa-edit
+            =link_to "https://chat-space-sample.herokuapp.com/groups/new", class:"side-header__box__menu__new-group" do
+              = fa_icon 'edit'
           %li.side-header__box__menu__edit-user
-            %a{:href => ""}
-              %i.fa.fa-cog
+            =link_to "https://chat-space-sample.herokuapp.com/users/1577/edit", class:"side-header__box__menu__edit-user" do
+              = fa_icon 'cog'
     .groups
-      %a{:href => ""}
+      =link_to "", class: "groups"do
         .group
           %p.group__group-name bbbbbb
           %p.group__latest-message まだメッセージがありません
-      %a{:href => ""}
+      =link_to "", class: "groups"do
         .group
           %p.group__group-name ああああ
           %p.group__latest-message 1
-      %a{:href => ""}
+      =link_to "", class: "groups"do
         .group
           %p.group__group-name ああ
           %p.group__latest-message まだメッセージがありません
-      %a{:href => ""}
+      =link_to "", class: "groups"do
         .group
           %p.group__group-name a
           %p.group__latest-message むずかしい
   .chat-main
     .main-header
       .main-header__left-box
-        %h2.main-header__left-box__current-group{""=>""}
+        %h2.main-header__left-box__current-group{"": ""}
           ああああ
         %ul.main-header__left-box__member-list
           Member：
           %li.main-header__left-box__member-list__member ぺぱ郎
-      %a{:href => ""}
+      =link_to "", class: "edit_btn"do
         .main-header__edit-btn Edit
     .messages
-      .message{"data-message_id" => ""}
+      .message{"data-message_id": ""}
         .message__upper-info
           %p.message__upper-info__talker ぺぱ郎
           %p.message__upper-info__date 2019/10/24(Thu) 18:56:07
         %p.message__text ああああ
-      .message{"data-message_id" => ""}
+      .message{"data-message_id": ""}
         .message__upper-info
           %p.message__upper-info__talker ぺぱ郎
           %p.message__upper-info__date 2019/10/24(Thu) 18:57:47
         %p.message__text このおおお
-      .message{"data-message_id" => ""}
+      .message{"data-message_id": ""}
         .message__upper-info
           %p.message__upper-info__talker ぺぱ郎
           %p.message__upper-info__date 2019/10/24(Thu) 18:59:06
         %p.message__text むずかしい
-      .message{"data-message_id" => ""}
+      .message{"data-message_id": ""}
         .message__upper-info
           %p.message__upper-info__talker ぺぱ郎
           %p.message__upper-info__date 2019/10/25(Fri) 10:28:45
         %p.message__text gggg
-      .message{"data-message_id" => ""}
+      .message{"data-message_id": ""}
         .message__upper-info
           %p.message__upper-info__talker ぺぱ郎
           %p.message__upper-info__date 2019/10/25(Fri) 10:28:55
         %p.message__text 今日も頑張ろう
-      .message{"data-message_id" => ""}
+      .message{"data-message_id": ""}
         .message__upper-info
           %p.message__upper-info__talker ぺぱ郎
           %p.message__upper-info__date 2019/10/25(Fri) 10:28:58
         %p.message__text １
-      .message{"data-message_id" => ""}
+      .message{"data-message_id": ""}
         .message__upper-info
           %p.message__upper-info__talker ぺぱ郎
           %p.message__upper-info__date 2019/10/25(Fri) 10:29:00
         %p.message__text 1
     .form
-      %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "", :enctype => "multipart/form-data", :method => "post"}
+      %form#new_message.new_message{"accept-charset": "UTF-8", action: "", enctype: "multipart/form-data", method: "post"}
         .input-box
-          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-          %label.input-box__image{:for => "message_image"}
+          %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
+          %label.input-box__image{for: "message_image"}
             %i.fa.fa-image
-            %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-        %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+            %input#message_image.input-box__image__file{name: "message[image]", type: "file"}/
+        %input.submit-btn{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}/
