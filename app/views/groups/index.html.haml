@@ -1,34 +1,18 @@
-.flash-box
-  %p.notice グループを作成しました
 .wrapper
   .chat-side
     .side-header
       .side-header__box
-        %p.side-header__box__user-name ぺぱ郎
+        %p.side-header__box__user-name
+          = current_user.name
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group
-            =link_to "https://chat-space-sample.herokuapp.com/groups/new", class:"side-header__box__menu__new-group" do
-              = fa_icon 'edit'
+            = link_to new_group_path do
+              = fa_icon 'edit' 
           %li.side-header__box__menu__edit-user
-            =link_to "https://chat-space-sample.herokuapp.com/users/1577/edit", class:"side-header__box__menu__edit-user" do
+            = link_to edit_user_path(current_user) do
               = fa_icon 'cog'
     .groups
-      =link_to "", class: "groups"do
-        .group
-          %p.group__group-name bbbbbb
-          %p.group__latest-message まだメッセージがありません
-      =link_to "", class: "groups"do
-        .group
-          %p.group__group-name ああああ
-          %p.group__latest-message 1
-      =link_to "", class: "groups"do
-        .group
-          %p.group__group-name ああ
-          %p.group__latest-message まだメッセージがありません
-      =link_to "", class: "groups"do
-        .group
-          %p.group__group-name a
-          %p.group__latest-message むずかしい
+      = render "shared/side_bar"
   .chat-main
     .main-header
       .main-header__left-box
@@ -37,7 +21,7 @@
         %ul.main-header__left-box__member-list
           Member：
           %li.main-header__left-box__member-list__member ぺぱ郎
-      =link_to "", class: "edit_btn"do
+      =link_to "/groups/1/edit", class: "edit_btn"do
         .main-header__edit-btn Edit
     .messages
       .message{"data-message_id": ""}

@@ -1,10 +1,4 @@
-.flash-box{
-  .notice{
-  background-color: #38AEF0;
-  color:white;
-  text-align: center;
-  }
-}
+
 
   .chat-side {
     width: 300px;
@@ -29,23 +23,28 @@
         display: flex;
       }
       &__box__menu__new-group{
-          padding-right: 2px;
+          padding-right: 5px;
+          font-size: 16px;
         }
+      &__box__menu__edit-user{
+        font-size: 16px;
+        }
+      
     }
     .groups{
       height:calc(100vh - 110px);
       background-color: #2f3e51;
-      padding: 5px 20px;
+      padding: 10px 10px 0;
       overflow: scroll;
       .group{
-      margin-bottom: 20px;
-      &__group-name{
+        .group__name{
         font-size:15px;
         margin-bottom: 5px;
-      }
-      &__latest-message{
+        }
+        .group__message{
         font-size:11px;
-      }
+        margin-bottom: 40px;
+        }
       }
     }
   }
