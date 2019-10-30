@@ -105,10 +105,10 @@
       overflow: scroll;
       .message{
         padding-bottom: 40px;
-        &__upper-info{
+        .upper-message{
           display: flex;
           margin-bottom: 10px;
-          &__talker{
+          &__user-name{
             color:#434a54;
             font-size:16px;
             font-weight: bold;
@@ -119,10 +119,12 @@
           margin-left: 10px;
           }
         }
-        &__text{
-          color:#434a54;
-          font-size:14px;
-          margin-bottom: 10px;
+        .lower-message{
+          &__content{
+            color:#434a54;
+            font-size:14px;
+            margin-bottom: 10px;
+          }
         }
       }
     }
@@ -130,39 +132,39 @@
       height: 50px;
       padding: 20px 40px;
       background-color: #ddd;
-    }
-    .form form{
-      display: flex;
-      .input-box{
+      width: 94.3%;
+      position: relative;
+      &__message{
+        height: 50px;
+        width: calc(100% - 115px);
+        float: left;
+        color:#434a54;
+        border-style: none;
+      }
+      &__mask{
+        float: left;
         position: relative;
-        width: 100%;
-        &__text{
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color:#434a54;
-          border-style: none;
-        }
         &__image{
-          font-size:1.3rem;
-          position: absolute;
-          top: 10px;
-          right: -40px;
+          font-size: 20px;
+          line-height: 50px;
           cursor: pointer;
+          position: absolute;
+          right: 10px;
         }
-        &__image__file{
-          display: none;
+        .hidden{
+        display: none;
         }
       }
-      
-      .submit-btn{
-        width: 10%;
+      &__submit{
         height: 50px;
         padding: 0 30px;
-        margin-left: 65px;
+        margin-right:28px;
         background-color: #38aef0;
         color:white;
         cursor: pointer;
+        float: right;
+        position: absolute;
+        right: 10px;
       }
     }
   }
