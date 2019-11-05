@@ -1,9 +1,6 @@
 $(function(){
   function buildMessage(message){
-    var insertImage = '';
-    if (message.image.url){
-      insertImage = `<img src = "${message.image.url}">`;
-    }
+    var insertImage = (message.image.url)? `<img src = "${message.image.url}">` : "";
     var html = `<div class="message" data-message_id = "${message.id}">
                   <div class="upper-message">
                     <div class="upper-message__user-name">
