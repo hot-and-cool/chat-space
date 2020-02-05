@@ -1,4 +1,4 @@
-# README
+
 # ChatSpace DB設計
 ## usersテーブル
 |Column|Type|Options|
@@ -40,3 +40,9 @@
 ### Association
 - belongs_to :user
 - belongs_to :group
+
+
+## テストアカウント
+
+- mail: test2@test.com
+- pass: aaaaaaaa
