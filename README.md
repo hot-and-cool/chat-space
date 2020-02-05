@@ -1,4 +1,4 @@
-# chatspace Info
+# ChatSpace Info
 ## URL
 http://3.114.120.52/
 
