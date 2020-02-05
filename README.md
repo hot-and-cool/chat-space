@@ -1,3 +1,11 @@
+# chatspace Info
+## URL
+http://3.114.120.52/
+
+## テストアカウント
+- mail: test2@test.com
+- pass: aaaaaaaa
+
 
 # ChatSpace DB設計
 ## usersテーブル
@@ -42,7 +50,9 @@
 - belongs_to :group
 
 
-## テストアカウント
+## URL
+http://3.114.120.52/
 
+## テストアカウント
 - mail: test2@test.com
 - pass: aaaaaaaa
